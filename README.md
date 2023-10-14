@@ -9,6 +9,7 @@ When I first approached this problem. I only considered solutions where the ant 
 To make it easier to visualize the paths the ant can take, we can unfold the cuboid into a flat diagram. There are a few different ways of unfolding the cube depending on which faces of the cube are crossed.
 
 If only considering paths which do not cross the top face of the cube (Case 1), then the shortest path is always along the edges touching the table, with path length $=W+L$. Any other path would introduce an unnecessary height increase or decrease, without changing the distance traveled along any other axis.
+
 ![Case 1](images/case-1.png)
 
 Paths which do cross the top face of the cube exist within a family of solutions (Case 2), which involve crossing a near top edge and far top edge of the cuboid. These paths don't cross any vertical edges.
