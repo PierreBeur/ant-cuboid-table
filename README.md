@@ -30,3 +30,22 @@ Here is a summary of possible cases:
 		- Path length $=\sqrt{(W+2H)^2+L^2}$
 
 To find the shortest path length, calculate the path length for each case and select the case with minimum path length.
+
+## Usage
+
+The program can be compiled and run online using C++ Shell. Follow [this link](https://tinyurl.com/ant-cuboid-table) to try it out!
+
+Example output:
+
+```
+Enter width, length, and height (space-separated): 70.1 79.3 11.4
+
+Results:
+Case 1  : 149.4
+Case 2.1: 121.937
+Case 2.2: 123.848
+Case 2.3: 122.143
+
+The following cases are optimal with path length 121.937:
+Case 2.1
+```
