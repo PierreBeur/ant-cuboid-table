@@ -1,6 +1,7 @@
 #include <iostream> // cout, cin, endl
 #include <iomanip> // setw
 #include <cmath> // sqrt
+#include <limits> // numeric_limits
 
 using namespace std;
 
@@ -10,8 +11,17 @@ int main() {
     double w, l, h;
 
     // get input from user
-    cout << "Enter width, length, and height (space-separated): ";
-    cin >> w >> l >> h;
+    bool valid = false;
+    while (!valid) {
+        cout << "Enter width, length, and height (space-separated): ";
+        if ((cin >> w >> l >> h) && w >= 0 && l >= 0 && h >= 0) {
+            valid = true; // input is valid, exit the loop
+        } else {
+            cout << "Invalid input. Please enter positive decimals." << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        }
+    }
 
     // calculate path lengths for each case
     double paths[4];
