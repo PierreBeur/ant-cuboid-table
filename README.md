@@ -4,7 +4,7 @@ A cuboid is glued to a table such that the bottom face of the cuboid is inaccess
 
 ![Cuboid](images/cuboid.png)
 
-When I first approached this problem. I only considered solutions where the ant travels from vertex to vertex without crossing any edges. For some cuboids, the shortest path involves crossing edges.
+When I first approached this problem, I only considered solutions where the ant travels from vertex to vertex without crossing any edges. For some cuboids, the shortest path involves crossing edges.
 
 To make it easier to visualize the paths the ant can take, we can unfold the cuboid into a flat diagram. There are a few different ways of unfolding the cube depending on which faces of the cube are crossed.
 
