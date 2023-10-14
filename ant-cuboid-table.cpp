@@ -1,9 +1,10 @@
-#include <iostream> // cout, cin
+#include <iostream> // cout, cin, endl
+#include <iomanip> // setw
 #include <cmath> // sqrt
 
 using namespace std;
 
-string cases[4] = {"1", "2.1", "2.2", "2.3"};
+string cases[4] = {"1  ", "2.1", "2.2", "2.3"};
 
 int main() {
     double w, l, h;
@@ -37,17 +38,20 @@ int main() {
     }
 
     // find minimum cases
-    bool result[4] = {
-        paths[0] <= min_l,
-        paths[1] <= min_l,
-        paths[2] <= min_l,
-        paths[3] <= min_l
-    };
+    bool result[4];
+    for (int i = 0; i < 4; i++) {
+        result[i] = paths[i] <= min_l;
+    }
 
     // display results
-    cout << "The following cases are optimal with path length " << min_l << ":" << endl;
+    cout << endl << "Results:" << endl;
     for (int i = 0; i < 4; i++) {
-        if (result[i]) cout << "Case " << cases[i];
+        cout << "Case " << cases[i] << ": " << paths[i] << endl;
+    }
+
+    cout << endl << "The following cases are optimal with path length " << min_l << ":" << endl;
+    for (int i = 0; i < 4; i++) {
+        if (result[i]) cout << "Case " << cases[i] << endl;
     }
 
     return 0;
